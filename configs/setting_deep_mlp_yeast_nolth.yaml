@@ -1,0 +1,26 @@
+batch_size: 64
+classes:
+- 0
+- 1
+- 2
+- 3
+dataset_name: yeast
+epochs: 25
+logger:
+  type: Log
+lth: false
+model:
+  activation_fn: ReLU
+  dropout: 0.2
+  hidden_dims:
+  - 128
+  - 64
+  input_dim: 8
+  name: MLP
+  t: 5.0
+optimizer:
+  lr: 0.001
+  name: Adam
+prune_iter: 2
+prune_ratio: 0.99
+verbose: true

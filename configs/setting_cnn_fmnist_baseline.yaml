@@ -1,0 +1,31 @@
+baseline: true
+loss: crossentropy
+classes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] 
+lth: true
+epochs: 15
+batch_size: 64
+verbose: true
+dataset_name: fashion_mnist
+prune_ratio: 0.60
+prune_iter: 2
+model:
+  name: ConvNet
+  input_channels: 1
+  input_dim: 784
+  hidden_conv_dims: [64]
+  hidden_fc_dims: [120, 64]
+  output_dim: 10
+  dropout_rate: 0
+  activation_fn: ReLU
+  conv_kernel_size: 5
+  padding: 1
+  conv_stride: 1
+  pool_kernel_size: 2
+  pool_stride: 2
+  t: 5.0
+optimizer:
+  name: Adam
+  lr: 0.001
+  betas: [0.9, 0.999]
+logger:
+  type: Log

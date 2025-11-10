@@ -1,0 +1,24 @@
+baseline: true
+loss: crossentropy
+batch_size: 64
+classes: [0, 1, 2, 3, 4]
+dataset_name: human_activity_recognition
+epochs: 25
+logger:
+  type: Log
+lth: false
+model:
+  activation_fn: ReLU
+  dropout: 0
+  hidden_dims:
+  - 512
+  input_dim: 561
+  name: MLP
+  t: 5.0
+  output_dim: 5
+optimizer:
+  lr: 0.0001
+  name: Adam
+prune_iter: 2
+prune_ratio: 0.99
+verbose: true
